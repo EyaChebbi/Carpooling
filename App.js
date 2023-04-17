@@ -1,12 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import Welcome from './Frontend/Screens/Welcome'
+import { NavigationContainer } from '@react-navigation/native';
+import RootNavigator from './Frontend/Navigation/RootNavigation';
+import FindMatch from './Frontend/Screens/FindMatch';
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+  //to uncomment after adding all the screens
+  /*  <NavigationContainer>
+     <RootNavigator/>
+   </NavigationContainer> */
+
+
+  <Welcome/>
+  //<FindMatch/>
   );
 }
 
