@@ -1,14 +1,15 @@
 import React, {useState} from 'react';
 import { StyleSheet, Text, View, Pressable, TextInput } from 'react-native';
-// import { Ionicons } from '@expo/vector-icons';
+ import { Ionicons } from '@expo/vector-icons';
 // import { Slider } from "@miblanchard/react-native-slider";
 import {Picker} from '@react-native-picker/picker';
 import Slider from '@react-native-community/slider';
 
+
 export default function DataDriver({navigation}) {
     const handleSearch = () => {
         console.log('Search Result: ....');
-        //navigation.navigate('Driver');
+        navigation.navigate('Driver');
     };
     
 
@@ -44,7 +45,7 @@ export default function DataDriver({navigation}) {
              <Picker
                 selectedValue={nbSpots}
                 onValueChange={(itemValue, itemIndex) => setNbSpots(itemValue)}
-                style={{ height: 50, width: 100 }}
+                style={{ height: 80, width: 100 ,justifyContent:'center'}}
             >
                 <Picker.Item label="1" value="1" />
                 <Picker.Item label="2" value="2" />
@@ -65,8 +66,8 @@ export default function DataDriver({navigation}) {
                 // value={searchRadius}
                 onValueChange={(val) => setSearchRadius(val + 'm')}
             /> 
-            <Pressable onPress={handleSearch}> 
-                <Text style={styles.search}>
+            <Pressable style={styles.search} onPress={handleSearch}> 
+                <Text style={{fontSize:"25"}} >
                     Search
                 </Text>
             </Pressable>
@@ -77,8 +78,7 @@ export default function DataDriver({navigation}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 140,
-    marginBottom: 100,
+    padding:20,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -97,17 +97,19 @@ const styles = StyleSheet.create({
     width: 100,
   }, 
   search:{
-    backgroundColor: '#8F43EE',
-    borderRadius: 13,
-    color: 'white',
-    borderColor: 'black',
-    borderWidth: 1,
-    fontWeight: 'bold',
-    fontSize: 18,
-    textAlign: 'center',
-    textAlignVertical: 'center',
-    height: 60,
-    width: 140,
+    backgroundColor: 'rgba(255, 192, 203, 0.8)',
+    paddingHorizontal: 40,
+    paddingVertical: 10,
+    borderWidth: 2,
+    borderRadius: 15, 
+    borderColor: 'black', 
+    shadowColor: 'black', 
+    shadowOffset: { width: 0, height: 5 }, 
+    shadowOpacity: 0.5, 
+    shadowRadius: 5, 
+    
+    
+
   },     
   mapInput:{
     backgroundColor: '#EEEEEE',
@@ -125,5 +127,6 @@ const styles = StyleSheet.create({
   selectStarting:{
     fontWeight: 'bold',
     fontSize: 18,
+    padding:20,
   },  
 });

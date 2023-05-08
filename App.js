@@ -9,12 +9,12 @@ import FindMatch from './Frontend/Screens/FindMatch';
 export default function App() {
   return (
   //to uncomment after adding all the screens
-  /*  <NavigationContainer>
+   <NavigationContainer>
      <RootNavigator/>
-   </NavigationContainer> */
+   </NavigationContainer> 
 
 
-  <Welcome/>
+
   //<FindMatch/>
   );
 }

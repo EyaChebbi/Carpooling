@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import WelcomeScreen from '../Screens/Welcome';
-//import DriverScreen from './DriverScreen';
+import DataDriver from '../Screens/DataDriver';
 
 const Stack = createStackNavigator();
 
@@ -15,7 +15,7 @@ export default function RootNavigator() {
       />
        <Stack.Screen
         name="Driver"
-        component={DriverScreen}
+        component={DataDriver}
         options={{ title: 'Driver' }}
       /> 
     </Stack.Navigator>
