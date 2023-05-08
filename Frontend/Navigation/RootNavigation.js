@@ -5,6 +5,7 @@ import DataDriver from '../Screens/DataDriver';
 import FindMatch from '../Screens/FindMatch';
 import PassengerList from '../Screens/PassengerList';
 import DriverList from '../Screens/DriverList';
+import MapScreen from '../Screens/MapScreen';
 
 const Stack = createStackNavigator();
 
@@ -37,6 +38,12 @@ export default function RootNavigator() {
         component={FindMatch}
         options={{ title: 'Find Match', headerShown: false }}
       /> 
+       <Stack.Screen
+        name="MapScreen"
+        component={MapScreen}
+        options={{ title: 'Map Screen', headerShown: false }}
+      /> 
+
     </Stack.Navigator>
   );
 }

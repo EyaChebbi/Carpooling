@@ -10,6 +10,7 @@ export default function FindMatch({ navigation }) {
     console.log("Cancel button pressed")
   };
 
+  
   return (
     <View style={styles.container}>
       <View style={styles.card}>
