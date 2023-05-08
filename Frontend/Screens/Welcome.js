@@ -6,12 +6,12 @@ import { Ionicons } from '@expo/vector-icons';
 export default function Welcome({navigation}) {
   const handleDriverPress = () => {
     console.log('Driver button pressed');
-    navigation.navigate('Driver');
+    navigation.navigate('DriverList');
 };
 
   const handlePassengerPress = () => {
     console.log('Passenger button pressed');
-    //navigation.navigate('Passenger');
+    navigation.navigate('PassengerList');
   };
 
   return (
@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
     fontSize: 35,
     fontWeight: 'bold',
     marginBottom: 16,
+    textAlign: 'center',
   },
   userTypeText: {
     fontSize: 18,
