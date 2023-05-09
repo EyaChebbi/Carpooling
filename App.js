@@ -21,7 +21,7 @@ export default function App() {
 <Provider store={store}>
   <NavigationContainer>
   <SafeAreaProvider>
-  <MapScreen/>
+  <RootNavigator/>
   </SafeAreaProvider>
   </NavigationContainer>
 </Provider>
